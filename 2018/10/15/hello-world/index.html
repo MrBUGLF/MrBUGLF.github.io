@@ -34,7 +34,8 @@
   <!-- leancloud -->
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
 <script src="/js/leancloud.js"></script>
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 	<body>
 		<!-- Preloader -->
 
@@ -288,16 +289,16 @@
 	<div class="article-content" id="article-content">
 		<h3 id="搭建环境配置"><a href="#搭建环境配置" class="headerlink" title="搭建环境配置"></a>搭建环境配置</h3><ol>
 <li><p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">安装node</a></p>
-<pre><code class="shell">$node -v
+<pre class="line-numbers language-shell"><code class="language-shell">$node -v
 v10.8.0
 $npm -v
 6.2.0
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p><a href="https://www.git-scm.com/download/" target="_blank" rel="noopener">安装git</a></p>
-<pre><code class="shell">$git --version
+<pre class="line-numbers language-shell"><code class="language-shell">$git --version
 git version 2.8.0.windows.1
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 <li><p>使用npm安装Hexo</p>
 <pre><code>npm install -g hexo-cli
@@ -357,11 +358,11 @@ git version 2.8.0.windows.1
 </blockquote>
 </li>
 <li><p>修改<code>_config.yml</code>配置文件，添加以下内容（根据自己的情况而定），与GitHub同步</p>
-<pre><code class="git">deploy:
+<pre class="line-numbers language-git"><code class="language-git">deploy:
   type: git
   repository: git@github.com:MrBUGLF/MrBUGLF.github.io.git
   branch: master
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>再安装一个插件，部署到GitHub</p>
 <pre><code>npm install hexo-deployer-git --save
 hexo d //部署
@@ -421,16 +422,11 @@ hexo d //部署
 							Centos7安装docker
 						</a>
 						<p>
-							卸载旧版本docker
-
-    Hello World
-
-
-
-
+							卸载旧版本dockek
 sudo yum remove docker \
                   docker-client \
-                  docker-...
+                  docker-client-latest \
+     ...
 						</p>
 					</div>
 

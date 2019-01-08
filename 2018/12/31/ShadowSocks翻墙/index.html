@@ -34,7 +34,8 @@
   <!-- leancloud -->
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
 <script src="/js/leancloud.js"></script>
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 	<body>
 		<!-- Preloader -->
 
@@ -292,42 +293,42 @@
 <li><code>BandwagonHOST</code></li>
 <li><code>vultr</code></li>
 </ul>
-<h4 id="安装SSR"><a href="#安装SSR" class="headerlink" title="安装SSR"></a>安装SSR</h4><pre><code class="shell">yum install wget -y //如果没有wget先安装
+<h4 id="安装SSR"><a href="#安装SSR" class="headerlink" title="安装SSR"></a>安装SSR</h4><pre class="line-numbers language-shell"><code class="language-shell">yum install wget -y //如果没有wget先安装
 wget --no-check-certificate https://freed.ga/github/shadowsocksR.sh; bash shadowsocksR.sh //安装ssr脚本
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>接下来根据提示设置SSR连接信息，配置完成后就可以下载shadowsocksR客户端进行连接，手机可以使用ShadowRocket小火箭<br><img src="http://www.lyz1234.com//userfiles/files/admin/cmd2.jpg" alt="img"><img src="http://www.lyz1234.com//userfiles/files/admin/cmd4.jpg" alt="img"></p>
 <h4 id="安装BBR加速"><a href="#安装BBR加速" class="headerlink" title="安装BBR加速"></a>安装BBR加速</h4><ol>
 <li><p>获取Google BBR脚本并执行</p>
-<pre><code class="shell">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+<pre class="line-numbers language-shell"><code class="language-shell">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
 sh ./bbr.sh
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 <li><p>查看内核版本是否大于4.9</p>
-<pre><code class="shell">uname -r 
-</code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">uname -r 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>执行<code>sysctl net.ipv4.tcp_available_congestion_control</code>，看是否有返回</p>
-<pre><code class="shell">net.ipv4.tcp_available_congestion_control = reno cubic bbr
-</code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">net.ipv4.tcp_available_congestion_control = reno cubic bbr
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>执行<code>sysctl net.core.default_qdisc</code>，看是否有以下返回</p>
-<pre><code class="shell">net.core.default_qdisc = fq
-</code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">net.core.default_qdisc = fq
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>执行<code>lsmod | grep bbr</code>，返回值有<code>tcp_bbr</code>表示已经启动</p>
 </li>
 <li><p>安装完成后，脚本提示需要重启vps，输入y并回车，重启</p>
 </li>
 </ol>
-<h4 id="安装锐速"><a href="#安装锐速" class="headerlink" title="安装锐速"></a>安装锐速</h4><pre><code class="shell">wget -N --no-check-certificate https://freed.ga/kernel/ruisu.sh &amp;&amp;
+<h4 id="安装锐速"><a href="#安装锐速" class="headerlink" title="安装锐速"></a>安装锐速</h4><pre class="line-numbers language-shell"><code class="language-shell">wget -N --no-check-certificate https://freed.ga/kernel/ruisu.sh &&
 bash ruisu.sh
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>脚本安装完之后重启服务器，继续安装</p>
-<pre><code class="shell">wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh &amp;&amp; bash serverspeeder.sh
-</code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh && bash serverspeeder.sh
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>备用脚本</p>
-<pre><code class="shell">wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh &amp;&amp; bash serverspeeder-all.sh
-</code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 	
 	</div>
 	
@@ -372,16 +373,11 @@ bash ruisu.sh
 							Centos7安装docker
 						</a>
 						<p>
-							卸载旧版本docker
-
-    Hello World
-
-
-
-
+							卸载旧版本dockek
 sudo yum remove docker \
                   docker-client \
-                  docker-...
+                  docker-client-latest \
+     ...
 						</p>
 					</div>
 

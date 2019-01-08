@@ -34,7 +34,8 @@
   <!-- leancloud -->
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
 <script src="/js/leancloud.js"></script>
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 	<body>
 		<!-- Preloader -->
 
@@ -290,14 +291,8 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<p>卸载旧版本docker</p>
-<pre>
-    Hello World
-</pre>
-
-
-
-<pre><code class="shell">sudo yum remove docker \
+		<p>卸载旧版本dockek</p>
+<pre class="line-numbers language-shell"><code class="language-shell">sudo yum remove docker \
                   docker-client \
                   docker-client-latest \
                   docker-common \
@@ -307,34 +302,34 @@
                   docker-selinux \
                   docker-engine-selinux \
                   docker-engine
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>安装所需要的包，<code>yum-utils</code>提供了<code>yum-config-manager</code> 效用，并<code>device-mapper-persistent-data</code>和<code>lvm2</code>由需要<code>devicemapper</code>存储驱动程序。</p>
-<pre><code class="shell">sudo yum install -y yum-utils \
+<pre class="line-numbers language-shell"><code class="language-shell">sudo yum install -y yum-utils \
   device-mapper-persistent-data \
   lvm2
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>设置<strong>稳定</strong>存储库</p>
-<pre><code class="shell">sudo yum-config-manager \
+<pre class="line-numbers language-shell"><code class="language-shell">sudo yum-config-manager \
     --add-repo \
     http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>安装最新的<code>docker-ce</code></p>
-<pre><code class="shell">sudo yum install docker-ce
-</code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">sudo yum install docker-ce
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>查看仓库中可用的<code>docker</code>版本</p>
-<pre><code class="shell">yum list docker-ce --showduplicates | sort -r
-</code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">yum list docker-ce --showduplicates | sort -r
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>安装特定版本</p>
-<pre><code class="shell">sudo yum install docker-ce-&lt;VERSION STRING&gt;
-</code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">sudo yum install docker-ce-<VERSION STRING>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>添加镜像源<code>/etc/docker/daemon.json</code></p>
-<pre><code class="json">{
-  &quot;registry-mirrors&quot;: [&quot;https://registry.dockercn.com&quot;,&quot;https://ko1ow3tj.mirror.aliyuncs.com&quot;]
-}
-</code></pre>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"registry-mirrors"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"https://registry.dockercn.com"</span><span class="token punctuation">,</span><span class="token string">"https://ko1ow3tj.mirror.aliyuncs.com"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>启动<code>docker</code></p>
-<pre><code class="shell">sudo systemctl start docker
-</code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">sudo systemctl start docker
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 	
 	</div>
 	

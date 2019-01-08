@@ -34,7 +34,8 @@
   <!-- leancloud -->
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
 <script src="/js/leancloud.js"></script>
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 	<body>
 		<!-- Preloader -->
 
@@ -301,20 +302,20 @@
 </blockquote>
 <p><img src="C:\Users\26682\AppData\Roaming\Typora\typora-user-images\1546334546002.png" alt="1546334546002"></p>
 <p>然后删除自带<code>JDK</code></p>
-<pre><code class="shell">rpm -e --nodeps java-1.8.0-openjdk-headless-1.8.0.161-2.b14.el7.x86_64
+<pre class="line-numbers language-shell"><code class="language-shell">rpm -e --nodeps java-1.8.0-openjdk-headless-1.8.0.161-2.b14.el7.x86_64
 rpm -e --nodeps java-1.7.0-openjdk-1.7.0.171-2.6.13.2.el7.x86_64
 rpm -e --nodeps java-1.8.0-openjdk-1.8.0.161-2.b14.el7.x86_64
 rpm -e --nodeps java-1.7.0-openjdk-headless-1.7.0.171-2.6.13.2.el7.x86_64
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>再验证一下是否删除</p>
 <p><img src="C:\Users\26682\AppData\Roaming\Typora\typora-user-images\1546334942837.png" alt="1546334942837"><img src="C:\Users\26682\AppData\Roaming\Typora\typora-user-images\1546334986236.png" alt="1546334986236"></p>
 <p>下载<code>sunJDK</code>的<code>Linux</code>版本，然后解压，<code>tar -zxvf jdk-8u191-linux-x64.tar.gz</code></p>
 <p><img src="C:\Users\26682\AppData\Roaming\Typora\typora-user-images\1546335259051.png" alt="1546335259051"></p>
 <p>配置环境变量<code>/etc/profile</code>文件，然后让它生效<code>source /etc/profile</code></p>
-<pre><code class="shell">export JAVA_HOME=/home/liufei/jdk
+<pre class="line-numbers language-shell"><code class="language-shell">export JAVA_HOME=/home/liufei/jdk
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export PATH=$PATH:$JAVA_HOME/bin
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p><img src="C:\Users\26682\AppData\Roaming\Typora\typora-user-images\1546335984914.png" alt="1546335984914"></p>
 	
 	</div>
@@ -360,16 +361,11 @@ export PATH=$PATH:$JAVA_HOME/bin
 							Centos7安装docker
 						</a>
 						<p>
-							卸载旧版本docker
-
-    Hello World
-
-
-
-
+							卸载旧版本dockek
 sudo yum remove docker \
                   docker-client \
-                  docker-...
+                  docker-client-latest \
+     ...
 						</p>
 					</div>
 
